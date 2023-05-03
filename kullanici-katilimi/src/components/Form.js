@@ -58,6 +58,7 @@ function Form() {
             type="text"
             id="firstName"
             name="firstName"
+            data-testid="firstName-input"
             value={formState.firstName}
             onChange={handleInputChange}
           />
@@ -69,6 +70,7 @@ function Form() {
             type="text"
             id="lastName"
             name="lastName"
+            data-testid="lastName-input"
             value={formState.lastName}
             onChange={handleInputChange}
           />
@@ -80,6 +82,7 @@ function Form() {
             type="email"
             id="email"
             name="email"
+            data-testid="email-input"
             value={formState.email}
             onChange={handleInputChange}
           />
@@ -91,6 +94,7 @@ function Form() {
             type="password"
             id="password"
             name="password"
+            data-testid="password-input"
             value={formState.password}
             onChange={handleInputChange}
           />
@@ -102,12 +106,16 @@ function Form() {
             type="checkbox"
             id="terms"
             name="terms"
+            data-testid="terms-checkbox"
             checked={formState.terms}
             onChange={handleInputChange}
           />
           {errors.terms && <div className="error">{errors.terms}</div>}
         </div>
-        <button type="submit">Sign Up</button>
+        <button 
+        type="submit"
+        data-testid="submit-button"
+        >Sign Up</button>
         </form>
       <div>
         {users.map((user, index) => (
